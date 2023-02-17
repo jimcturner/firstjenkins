@@ -11,7 +11,7 @@ pipeline {
         stage('test') {
             steps {
                 sh 'echo test stage: Running unit tests'
-                sh 'python -m unittest discover tests "*_tests.py'
+                sh 'python -m unittest discover tests "*_tests.py"'
             }
         }
     }
