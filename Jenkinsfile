@@ -17,9 +17,7 @@ pipeline {
         stage('deploy to github') {
             steps {
                 sh 'echo deploy stage:'
-                sh 'git clone https://github.com/jimcturner/firstjenkinsdeployrepo.git'
-                sh 'cp build/* firstjenkinsdeployrepo/'
-                sh 'git push -u origin master'
+                sh 'ssh turnej04@192.168.3.19'
             }
         }
     }
