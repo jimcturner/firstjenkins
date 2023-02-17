@@ -11,6 +11,7 @@ pipeline {
         stage('build pyz') {
             steps {
                 sh 'echo build stage: Creating pyz archive'
+                sh 'mkdir build'
                 sh 'python -m zipapp src/main.py -o build/firstJenkinsPythonDeployment.pyz -p "/usr/bin/env python" -c'
             }
         }
