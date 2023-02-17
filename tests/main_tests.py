@@ -20,7 +20,7 @@ class Main_Tests(unittest.TestCase):
         print("Tests set up")
 
     def test_intDoubler(self):
-        self.assertEqual("004", src.main.intDoubler(4))
+        self.assertEqual("004", src.main.intDoubler(2))
 
     def tearDown(self) -> None:
         print("Tests teardown")
