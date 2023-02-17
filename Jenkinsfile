@@ -17,7 +17,7 @@ pipeline {
         stage('deploy to github') {
             steps {
                 sh 'echo deploy stage:'
-                sh 'ssh turnej04@192.168.3.19'
+                sh 'sftp turnej04@192.168.3.19'
             }
         }
     }
