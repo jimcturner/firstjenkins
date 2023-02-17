@@ -15,7 +15,7 @@ pipeline {
                 sh 'python -m zipapp src/main.py -o build/firstJenkinsPythonDeployment.pyz -p "/usr/bin/env python" -c'
             }
         }
-        stage('deploy to remote') {
+        stage('deploy to remote server') {
             steps {
                 sh 'echo deploy stage:'
                 sh 'cd build'
