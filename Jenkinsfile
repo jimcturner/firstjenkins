@@ -17,6 +17,7 @@ pipeline {
         stage('deploy to remote server') {
             steps {
                 sh 'echo deploy stage:'
+                sh 'ls -l'
             }
         }
     }
