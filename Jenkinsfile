@@ -13,6 +13,11 @@ pipeline {
                 sh 'echo build stage: Creating pyz archive'
                 sh 'mkdir build'
                 sh 'python -m zipapp src/main.py -o build/firstJenkinsPythonDeployment.pyz -p "/usr/bin/env python" -c'
+            }
+        }
+        stage('deploy to remote') {
+            steps {
+                sh 'echo deploy stage:'
                 sh 'cd build'
                 sh 'ls -l'
             }
