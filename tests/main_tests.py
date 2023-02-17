@@ -11,6 +11,9 @@ import src.main
 # If running from the (parent) project folder use
 #
 #       python -m tests.main_tests *OR* python -m unittest discover tests "*_tests.py"
+#
+# See https://gideonbrimleaf.github.io/2021/01/26/relative-imports-python.html for reference
+
 
 class Main_Tests(unittest.TestCase):
     def setUp(self) -> None:

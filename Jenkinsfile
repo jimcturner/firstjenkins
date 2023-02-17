@@ -5,6 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
+                sh 'echo hello from Jenkins project pipeline build process!!!!!'
             }
         }
     }
