@@ -10,7 +10,8 @@ pipeline {
         }
         stage('test') {
             steps {
-                sh 'echo hello from Jenkins project pipeline test stage!!!!!'
+                sh 'echo test stage: Running unit tests'
+                sh 'python -m unittest discover tests "*_tests.py'
             }
         }
     }
