@@ -14,10 +14,12 @@ pipeline {
                 sh 'python -m zipapp src/main.py -o build/firstJenkinsPythonDeployment.pyz -p "/usr/bin/env python" -c'
             }
         }
-        stage('deploy to remote server') {
+        stage('deploy to github') {
             steps {
                 sh 'echo deploy stage:'
-                sh 'ls -l'
+                sh 'git clone https://github.com/jimcturner/firstjenkinsdeployrepo.git'
+                sh 'cp build/* firstjenkinsdeployrepo/'
+                sh 'git push -u origin master'
             }
         }
     }
