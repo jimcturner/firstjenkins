@@ -25,7 +25,7 @@ pipeline {
                    sh 'echo Inner: `pwd`'
                    sh 'cp ../build/* .'
                    sh "ls -lart ./*"
-                   sh 'git --version'
+                   sh 'echo `whereis git`'
                    // sh 'git push -u origin master'ß
 
 
