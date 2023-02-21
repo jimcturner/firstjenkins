@@ -10,8 +10,11 @@ pipeline {
         }
         stage('build pyz') {
             steps {
-                sh 'echo build stage: Creating pyz archive in /build'
-                sh 'python -m zipapp src/main.py -o build/firstJenkinsPythonDeployment.pyz -p "/usr/bin/env python" -c'
+                dir('build') {
+                    sh 'echo build stage: Creating pyz archive in /build'
+                    sh 'python -m zipapp src/main.py -o firstJenkinsPythonDeployment.pyz -p "/usr/bin/env python" -c'
+                }
+
             }
         }
         stage('Checkout from github') {
