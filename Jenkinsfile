@@ -2,10 +2,6 @@
 pipeline {
     agent { docker { image 'python:3.10.7-alpine' } }
 
-    tools {
-        git 'agent-git'
-    }
-
     stages {
         stage('test') {
             steps {
