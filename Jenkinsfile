@@ -14,10 +14,12 @@ pipeline {
                 sh 'python -m zipapp src/main.py -o build/firstJenkinsPythonDeployment.pyz -p "/usr/bin/env python" -c'
             }
         }
-        stage('deploy to github') {
+        stage('Checkout from github') {
             steps {
-                sh 'echo deploy stage:'
-                sh 'sftp turnej04@192.168.3.19'
+                sh 'pwd'
+                dir('my-new-folder') {
+                    sh "pwd"
+                }
             }
         }
     }
