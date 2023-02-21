@@ -19,13 +19,14 @@ pipeline {
                 sh 'echo Outer: `pwd`'
                 dir('temp-subfolder') {
                    // The below will clone your repo and will be checked out to master branch by default.
-                   git changelog: false, poll: false, url: 'https://github.com/jimcturner/firstjenkinsdeployrepo.git'
+                   git url: 'https://github.com/jimcturner/firstjenkinsdeployrepo.git'
                    // Do a ls -lart to view all the files are cloned. It will be clonned. This is just for you to be sure about it.
                    sh "ls -lart ./*"
                    sh 'echo Inner: `pwd`'
                    sh 'cp ../build/* .'
                    sh "ls -lart ./*"
-                   sh 'git push -u origin master'
+                   sh 'echo git: `which git`'
+                   // sh 'git push -u origin master'
 
 
                 }
