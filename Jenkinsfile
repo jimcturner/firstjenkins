@@ -26,6 +26,7 @@ pipeline {
                    sh 'cp ../build/* .'
                    sh "ls -lart ./*"
                    sh 'echo `whereis git`'
+                   sh 'printenv'
                    // sh 'git push -u origin master'ß
 
 
