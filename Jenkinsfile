@@ -35,7 +35,7 @@ pipeline {
                    sh "ls -lart ./*"
                    sh 'echo `whereis git`'
                    sh 'printenv'
-                   sh 'git push -u origin master'
+                   sh '/usr/bin/git push -u origin master'
 
 
                 }
