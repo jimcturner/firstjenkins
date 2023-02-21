@@ -26,7 +26,7 @@ pipeline {
                    sh 'cp ../build/* .'
                    sh "ls -lart ./*"
                    sh 'git --version'
-                   // sh 'git push -u origin master'
+                   // sh 'git push -u origin master'ß
 
 
                 }
