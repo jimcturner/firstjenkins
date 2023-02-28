@@ -35,9 +35,9 @@ pipeline {
                    sh 'cp ../build/* .'
                    sh "ls -lart ./*"
                    sh 'echo `whereis git`'
-                   sh 'printenv'
-                   sh '/usr/bin/git push -u origin master'
-
+//                    sh 'printenv'
+//                    sh '/usr/bin/git push -u origin master'
+                    sh 'git status'
 
                 }
             }
