@@ -36,6 +36,7 @@ pipeline {
                    sh "ls -lart ./*"
                    sh 'echo `whereis git`'
                    sh 'git add *'
+                   sh 'git config --global jimcturner "James Turner"'
                    sh '/usr/bin/git push -u origin master'
                 }
             }
