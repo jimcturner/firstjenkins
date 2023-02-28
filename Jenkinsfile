@@ -36,9 +36,10 @@ pipeline {
                    sh "ls -lart ./*"
                    sh 'echo `whereis git`'
                    sh 'git add *'
-                   sh 'rm .git/config.lock'
-                   sh 'git config --global user.name "jimcturner"'
-                   sh '/usr/bin/git push -u origin master'
+                   sh 'find / config.lock'
+//                    sh 'rm .git/config.lock'
+//                    sh 'git config --global user.name "jimcturner"'
+//                    sh '/usr/bin/git push -u origin master'
                 }
             }
         }
